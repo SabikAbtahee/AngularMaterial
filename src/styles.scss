@@ -52,21 +52,21 @@
 // Default theme styles.
 // @include angular-material-theme($candy-theme);
 @import '~@angular/material/theming';
-
+@import "https://fonts.googleapis.com/css?family=Roboto:300,400,500";
 @include mat-core();
 
 
 
 // @import '~@angular/material/theming';
 $my-theme-primary: mat-palette($mat-green);
-$my-theme-accent : mat-palette($mat-amber);
-$my-theme-warn   : mat-palette($mat-red);
+$my-theme-accent : mat-palette($mat-pink);
+$my-theme-warn   : mat-palette($mat-purple);
 $my-theme: mat-light-theme(
     $my-theme-primary,
     $my-theme-accent,
     $my-theme-warn
 );
-@include angular-material-theme($my-theme);
+// @include angular-material-theme($my-theme);
 
 $dark-primary: mat-palette($mat-blue-grey);
 $dark-accent:  mat-palette($mat-amber, A200, A100, A400);
@@ -87,3 +87,12 @@ $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
   margin:0;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+
+
+$custom-typography: mat-typography-config(
+  $font-family: 'Roboto, monospace',
+  $headline: mat-typography-level(32px, 48px, 700),
+  $body-1: mat-typography-level(16px, 24px, 500)
+);
+@include mat-core($custom-typography);

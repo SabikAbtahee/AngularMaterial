@@ -1,7 +1,8 @@
 <mat-sidenav-container [ngClass]="{
-  'theme1':themes[0],
+  'theme1': themes[0],
   'theme2': themes[1]
-}" class="sidenav-container" fullscreen>
+}" class="sidenav-container"
+  fullscreen>
 
   <mat-sidenav #drawer class="sidenav" fixedInViewport="true" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="!(isHandset$ | async)">
@@ -16,8 +17,8 @@
         <!-- width = "200" height = "200" -->
 
 
-        <div class="flex-item">Sabik Abtahee</div>
-        <div class="flex-item">+88-65412398</div>
+        <div class="flex-item"><h2>Sabik Abtahee</h2></div>
+        <div class="flex-item"><h2>+88-65412398</h2></div>
 
       </div>
 
@@ -41,15 +42,15 @@
       <span class="example-fill-remaining-space"></span>
 
       <!-- <span>
-        <button (click)="changeTheme()" mat-raised-button mat-icon-button>
-          <i class="material-icons">
+        <button (click) = "changeTheme()" mat-raised-button mat-icon-button>
+        <i      class   = "material-icons">
             reorder
           </i>
         </button>
       </span> -->
 
       <button mat-button [matMenuTriggerFor]="menu" mat-raised-button mat-icon-button><i class="material-icons">
-        drag_indicator
+          drag_indicator
         </i></button>
       <mat-menu #menu="matMenu">
         <button mat-menu-item (click)="changeTheme('theme1')">Theme 1</button>
