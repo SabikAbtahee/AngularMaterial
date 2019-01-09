@@ -8,7 +8,7 @@ import { MatToolbarModule, MatSidenavModule, MatCardModule, MatIconModule, MatBu
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MainContentComponent } from './main-content/main-content.component';
-
+import {MatMenuModule} from '@angular/material/menu';
 
 
 
@@ -33,7 +33,8 @@ import { MainContentComponent } from './main-content/main-content.component';
     MatIconModule,
     MatButtonModule,
     LayoutModule,
-    MatListModule
+    MatListModule,
+    MatMenuModule
     
     
   ],
