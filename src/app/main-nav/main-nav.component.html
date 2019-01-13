@@ -17,8 +17,16 @@
         <!-- width = "200" height = "200" -->
 
 
-        <div class="flex-item"><h2>Sabik Abtahee</h2></div>
-        <div class="flex-item"><h2>+88-65412398</h2></div>
+        <div class="flex-item">
+          <h2>Sabik Abtahee</h2>
+        </div>
+        <div class="flex-item">
+          <h2>+88-65412398</h2>
+        </div>
+
+        <div class="flex-item"><h2><a routerLink="/imrulVai">ImrulVai</a></h2></div>
+        <div class="flex-item"><h2> <a routerLink="/user">User</a> </h2></div>
+        <div class="flex-item"><h2><a routerLink="/person">Person</a></h2></div>
 
       </div>
 
@@ -38,20 +46,27 @@
 
       <span>Theme Assignment</span>
 
-      <!-- This fills the remaining space of the current row -->
+
+      <span class="example-fill-remaining-space"></span>
+      <a routerLink="/imrulVai">ImrulVai</a>
+
+
+
       <span class="example-fill-remaining-space"></span>
 
-      <!-- <span>
-        <button (click) = "changeTheme()" mat-raised-button mat-icon-button>
-        <i      class   = "material-icons">
-            reorder
-          </i>
-        </button>
-      </span> -->
 
+      <a routerLink="/user">User</a>
+
+      <span class="example-fill-remaining-space"></span>
+
+      <a routerLink="/person">Person</a>
+
+
+      <span class="example-fill-remaining-space"></span>
       <button mat-button [matMenuTriggerFor]="menu" mat-raised-button mat-icon-button><i class="material-icons">
-          drag_indicator
+        palette
         </i></button>
+        
       <mat-menu #menu="matMenu">
         <button mat-menu-item (click)="changeTheme('theme1')">Theme 1</button>
         <button mat-menu-item (click)="changeTheme('theme2')">Theme 2</button>
@@ -64,4 +79,5 @@
     <ng-content></ng-content>
   </mat-sidenav-content>
 
+  <!-- <router-outlet></router-outlet> -->
 </mat-sidenav-container>

@@ -76,6 +76,7 @@ $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
 
 .theme1 {
   @include angular-material-theme($dark-theme);
+  // background: gray;
   // @include angular-material-theme($my-theme);
 }
 .theme2{
@@ -96,3 +97,7 @@ $custom-typography: mat-typography-config(
   $body-1: mat-typography-level(16px, 24px, 500)
 );
 @include mat-core($custom-typography);
+
+.content{
+  margin: 5%;
+}
